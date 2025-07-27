@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Laboratorio Clinico</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Interactiva - Laboratorio Clínico</title>
+  <link rel="stylesheet" href="style.css" />
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .semestre {
+      margin-bottom: 30px;
+    }
+    .titulo-semestre {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .ramo {
+      background-color: #bbb;
+      border: 1px solid #999;
+      border-radius: 6px;
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+      display: inline-block;
+      min-width: 180px;
+      text-align: center;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .ramo.bloqueado {
+      background-color: #888;
+      color: #ddd;
+      cursor: not-allowed;
+      text-decoration: line-through;
+    }
+    .ramo.aprobado {
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .ramo:hover:not(.bloqueado):not(.aprobado) {
+      background-color: #999;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <h1>Laboratorio Clinico</h1>
-  <div id="grid"></div>
+  <h1>Malla Interactiva - Tecnología Médica</h1>
+  <div id="malla"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
